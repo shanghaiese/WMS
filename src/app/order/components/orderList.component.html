@@ -1,0 +1,179 @@
+    <div class="clearfix">
+    <div class="col-md-12 component-header">
+        <div class="pull-left">
+           <button class="btn-back"><i class="fa fa-level-up" aria-hidden="true"></i>&nbsp;返回</button>
+           订单列表
+
+        </div>
+        <div class="pull-right">
+            <button type="button" class="btn btn-refresh btn-m"><i aria-hidden="true" class="fa fa-refresh"></i>刷新</button>
+            <button type="button" class="btn btnGreen btn-m"><i aria-hidden="true" class="fa fa-plus"></i>新增</button>
+        </div>
+        </div>
+    </div>
+    <div class=" component-content clearfix">
+        <form class="form-horizontal " role="form">
+            <div class="form-group row">
+                <label class="col-xs-4 col-sm-4 col-md-3 col-xl-2 col-lg-2 form-control-label ">采购订单</label>
+                <div class="col-xs-8 col-sm-8 col-md-3 col-xl-2 col-lg-2 input-group-control">
+                   <md-input dividerColor="" placeholder="" ></md-input>
+                </div>
+           
+        
+                <label class="col-xs-4 col-sm-4 col-md-3 col-xl-2 col-lg-2 form-control-label ">来源单号</label>
+                <div class="col-xs-8 col-sm-8 col-md-3 col-xl-2 col-lg-2 input-group-control">
+                   <md-input dividerColor="accent" placeholder="" ></md-input>
+                </div>
+           
+                <label class="col-xs-4 col-sm-4 col-md-3 col-xl-2 col-lg-2 form-control-label ">订单状态</label>
+                <div class="col-xs-8 col-sm-8 col-md-3 col-xl-2 col-lg-2 input-group-control">
+                   <md-input dividerColor="accent" placeholder="" ></md-input>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-xs-4 col-sm-4 col-md-3 col-xl-2 col-lg-2 form-control-label ">订单类型</label>
+                <div class="col-xs-8 col-sm-8 col-md-3 col-xl-2 col-lg-2 input-group-control">
+                 <select id="basic" class=" form-control select">
+                      <option>cow</option>
+                      <option data-subtext="option subtext">bull</option>
+                      <option class="get-class" disabled>ox</option>
+                     
+                    </select>
+                </div>
+                 
+           
+        
+                <label class="col-xs-4 col-sm-4 col-md-3 col-xl-2 col-lg-2 form-control-label ">库区</label>
+                <div class="col-xs-8 col-sm-8 col-md-3 col-xl-2 col-lg-2 input-group-control">
+                   <md-input dividerColor="accent" placeholder="" ></md-input>
+                   <div class="right-icon" (click)="openProductModal()"><i class="fa fa-search icon-color" aria-hidden="true"></i></div>
+                </div>
+           
+                <label class="col-xs-4 col-sm-4 col-md-3 col-xl-2 col-lg-2 form-control-label ">商品</label>
+                <div class="col-xs-8 col-sm-8 col-md-3 col-xl-2 col-lg-2 input-group-control">
+                   <md-input dividerColor="accent" placeholder="" ></md-input>
+                </div>
+
+            </div>
+            <div class="form-group row">
+                <label class="col-xs-4 col-sm-4 col-md-3 col-xl-2 col-lg-2 form-control-label ">供应商</label>
+                <div class="col-xs-8 col-sm-8 col-md-3 col-xl-2 col-lg-2 input-group-control">
+                   <md-input dividerColor="accent" placeholder="" ></md-input>
+                   <div class="right-icon" (click)="openSuplierModal()"><i class="fa fa-search icon-color" aria-hidden="true"></i></div>
+                </div>
+           
+                <label class="col-xs-4 col-sm-4 col-md-3 col-xl-2 col-lg-2 form-control-label ">货主</label>
+                <div class="col-xs-8 col-sm-8 col-md-3 col-xl-2 col-lg-2 input-group-control">
+                   <md-input dividerColor="accent" placeholder="" ></md-input>
+                </div>
+           
+            </div>
+             <div class="form-group row">
+                <label class="col-xs-4 col-sm-4 col-md-3 col-xl-2 col-lg-2 form-control-label ">时间段</label>
+                <div class="col-xs-8 col-sm-8 col-md-3 col-xl-2 col-lg-2 input-group-control">
+
+                   <input type="text" class="date-picker" placeholder="2016-11-10 00:00:00" onFocus="WdatePicker({startDate:'%y-%M-01 00:00:00',dateFmt:'yyyy-MM-dd HH:mm:ss',alwaysUseStartDate:false})" keydown="onKeyDown($event)" >
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-3 col-xl-2 col-lg-2 input-group-control textCenter">
+
+                   至
+                </div>
+                 <div class="col-xs-8 col-sm-8 col-md-3 col-xl-2 col-lg-2 input-group-control">
+
+                   <input type="text" class="date-picker" placeholder="2016-11-10 00:00:00" onFocus="WdatePicker({startDate:'%y-%M-01 00:00:00',dateFmt:'yyyy-MM-dd HH:mm:ss',alwaysUseStartDate:false})" keydown="onKeyDown($event)" >
+                     <div class="right-icon"><i class="fa fa-calendar icon-color" aria-hidden="true"></i></div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-8 col-xl-4 col-lg-4 mt10 textRight">
+                <div class="btn-group " role="group" aria-label="Second group">
+                    <button type="button" class="btn btn-secondary">今天</button>
+                    <button type="button" class="btn btn-secondary">昨天</button>
+                    <button type="button" class="btn btn-secondary">近一周</button>
+                    <button type="button" class="btn btn-secondary">近两周</button>
+                    <button type="button" class="btn btn-secondary">近三周</button>
+                    <button type="button" class="btn btn-secondary">近一月</button>
+                  </div>
+                </div>
+            </div>
+             <div class="form-group row">
+              <div class="col-xl-2 col-lg-2 col-md-3 col-sm-4"></div>
+              <div class=" col-xl-8 col-lg-8 col-md-6 col-sm-8">
+                <button type="submit" class="btn btn-secondary btnGreen btn-l"><i aria-hidden="true" class="fa fa-search"></i>搜索</button>
+                <button type="reset" class="btn btn-secondary btn-l ml10"><i aria-hidden="true" class="fa fa-times"></i>重置</button>
+              </div>
+            </div>
+        </form>
+        <div class="split"></div>
+
+
+    </div>
+   <modal #productModal>
+    <modal-header>
+        <h4 class="modal-title">查询</h4>
+    </modal-header>
+    <modal-body>
+
+            <div class="form-group ">
+                <label class="col-xs-4 col-sm-4 col-md-3 col-xl-2 col-lg-2 form-control-label ">供应商</label>
+                <div class="col-xs-8 col-sm-8 col-md-3 col-xl-2 col-lg-2 input-group-control">
+                   <md-input dividerColor="" placeholder="" ></md-input>
+                </div>
+           
+        
+                <label class="col-xs-4 col-sm-4 col-md-3 col-xl-2 col-lg-2 form-control-label ">代码</label>
+                <div class="col-xs-8 col-sm-8 col-md-3 col-xl-2 col-lg-2 input-group-control">
+                   <md-input dividerColor="accent" placeholder="" ></md-input>
+                </div>
+           
+                <label class="col-xs-4 col-sm-4 col-md-3 col-xl-2 col-lg-2 form-control-label ">采购订单</label>
+                <div class="col-xs-8 col-sm-8 col-md-3 col-xl-2 col-lg-2 input-group-control">
+                   <md-input dividerColor="accent" placeholder="" ></md-input>
+                </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-xl-4 col-lg-4 col-md-6 col-sm-4"></div>
+              <div class=" col-xl-8 col-lg-8 col-md-6 col-sm-8 textRight">
+                <button type="submit" class="btn btn-secondary btnGreen btn-l"><i aria-hidden="true" class="fa fa-search"></i>搜索</button>
+               
+              </div>
+            </div>
+        
+           <table class="table table-striped data-list">
+                              <thead>
+                                <tr>
+                                  <th>序号</th>
+                                  <th>代码</th>
+                                  <th>采购单号</th>
+                                  <th>供应商</th>
+                                  <th>预期数量</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr><td>1</td>
+                                <td>1222####</td>
+                                <td>1$$$$$</td>
+                                <td>1$$$$$</td>
+                                <td>1$$$$$</td>
+                                </tr>
+                              </tbody>
+                      </table>
+              
+    </modal-body>
+    <modal-footer [show-default-buttons]="false">
+        <button class="btn btn-secondary" (click)="closeProductModal()">取消</button>
+         <button class="btn btn-secondary btnGreen" >确定</button>
+    </modal-footer>
+</modal>
+<modal #suplierModal>
+    <modal-header>
+        <h4 class="modal-title">I'm a modal!</h4>
+    </modal-header>
+    <modal-body>
+        <div class="form-group">
+            <label for="textbox">I'm a textbox!</label>
+            <input autofocus type="text" class="form-control" id="textbox">
+        </div>        
+    </modal-body>
+    <modal-footer [show-default-buttons]="true"></modal-footer>
+</modal>
+
+ 

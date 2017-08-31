@@ -1,0 +1,362 @@
+<div>
+    <div class="row preArrivalNotice-header screen-mt-600">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-4">
+           
+            <div class="preArrivalNotice-header-title">订单列表
+
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8">
+            <button class="button_save"><i class="fa fa-check" aria-hidden="true"></i>保存</button>
+             <button  class="button_save"><i class="fa fa-refresh" aria-hidden="true"></i>刷新</button>
+        </div>
+
+    </div>
+    <div class="row preArrivalNotice-header screen-lt-600">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="preArrivalNotice-header-title header-title">订单列表</div>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+             <div class="col-md-6 col-sm-6 col-xs-6">
+                  <button class="button_save button-common"><i class="fa fa-check" aria-hidden="true"></i>保存</button>
+             </div>
+              <div class="col-md-6 col-sm-6 col-xs-6">
+                  <button  class="button_save button-common"><i class="fa fa-refresh" aria-hidden="true"></i>刷新</button>
+              </div>
+        </div>
+
+    </div>
+    <div class="row preArrivalNotice-content" *ngIf="!togglePreArrivalNoticeForm">
+        <form class="form-horizontal form-horizontal-update col-xs-12 col-sm-6 col-md-6 col-xl-4 col-lg-4 form-height" role="form">
+            <div class="form-group">
+                <label class="col-xs-3 col-sm-3 col-md-4 col-xl-4 col-lg-4 control-label" style="padding: 0">货主代码</label>
+                <div class="col-xs-9 col-sm-9 col-md-8 col-xl-8 col-lg-8">
+
+                    <input type="text" class="form-control code-input" value="00013344244545445">
+
+                </div>
+            </div>
+        </form>
+        <form class="form-horizontal form-horizontal-update col-xs-12 col-sm-6 col-md-6 col-xl-4 col-lg-4 form-height" role="form">
+            <div class="form-group">
+                <label class="col-xs-3 col-sm-3 col-md-4 col-xl-4 col-lg-4 control-label" style="padding: 0">来源单号</label>
+                <div class="col-xs-9 col-sm-9 col-md-8 col-xl-8 col-lg-8 preArrivalNotice-md-margin">
+                    <!--<input type="text" class="form-control" placeholder="0001111222" style="background-color: #F8F8F8;padding: 0;border: none;border-radius: 0;margin: 2px;border-bottom: 1px solid #cccccc;">-->
+                    <md-input placeholder="0001111222" style="width: 100%"></md-input>
+                </div>
+            </div>
+        </form>
+        <form class="form-horizontal form-horizontal-update col-xs-12 col-sm-6 col-md-6 col-xl-4 col-lg-4 form-height" role="form">
+            <div class="form-group">
+                <label class="col-xs-3 col-sm-3 col-md-4 col-xl-4 col-lg-4 control-label" style="padding: 0">采购订单</label>
+                <div class="col-xs-9 col-sm-9 col-md-8 col-xl-8 col-lg-8">
+                    <input type="text" class="form-control order-input" placeholder="系统自动生成">
+                </div>
+            </div>
+        </form>
+
+
+
+        <form class="form-horizontal form-horizontal-update col-xs-12 col-sm-6 col-md-6 col-xl-4 col-lg-4 form-height" role="form">
+            <div class="form-group">
+                <label class="col-xs-3 col-sm-3 col-md-4 col-xl-4 col-lg-4 control-label" style="padding: 0">ASN类型</label>
+                <div class="col-xs-9 col-sm-9 col-md-8 col-xl-8 col-lg-8 preArrivalNotice-md-margin" style="position: relative">
+                    <input type="text" class="form-control catogory-input" placeholder="新建ASN">
+                    <div class="right-icon"><i class="fa fa-sort-down" aria-hidden="true"></i></div>
+                    <!--<md-input placeholder="First name" style="width: 100%"></md-input>-->
+                     <!--<md-select placeholder="wms" >
+                        <md-option>wms </md-option>
+                    </md-select>-->
+                     <!--<ng2-select [placeholder]="'Choose your framework'"
+                                [options]="['EmberJS', 'React', 'Vue', 'Angular2']"
+                                >
+                    </ng2-select>-->
+                </div>
+                <!--<md-select placeholder="Food" >
+                    <md-option>wms </md-option>
+                </md-select>-->
+                 <!--<button md-raised-button>raised</button>-->
+                 
+               
+            </div>
+        </form>
+        <form class="form-horizontal form-horizontal-update col-xs-12 col-sm-6 col-md-6 col-xl-4 col-lg-4 form-height" role="form">
+            <div class="form-group">
+                <label class="col-xs-3 col-sm-3 col-md-4 col-xl-4 col-lg-4 control-label" style="padding: 0">包含商品</label>
+                <div class="col-xs-9 col-sm-9 col-md-8 col-xl-8 col-lg-8" style="position: relative">
+                    <input type="text" class="form-control contaionGoods-input" placeholder="联华超市">
+                    <div class="right-icon"><i class="fa fa-search" aria-hidden="true"></i></div>
+                </div>
+            </div>
+        </form>
+        <form class="form-horizontal form-horizontal-update col-xs-12 col-sm-6 col-md-6 col-xl-4 col-lg-4 form-height" role="form">
+            <div class="form-group">
+                <label class="col-xs-3 col-sm-3 col-md-4 col-xl-4 col-lg-4 control-label" style="padding: 0">供应商</label>
+                <div class="col-xs-9 col-sm-9 col-md-8 col-xl-8 col-lg-8" style="position: relative">
+                    <input type="text" class="form-control supplial-input" placeholder="雀巢">
+                    <div class="right-icon"><i class="fa fa-search" aria-hidden="true"></i></div>
+                </div>
+            </div>
+        </form>
+
+
+
+        <form class="form-horizontal form-horizontal-update col-xs-12 col-sm-6 col-md-6 col-xl-4 col-lg-4 form-height" role="form">
+            <div class="form-group">
+                <label class="col-xs-3 col-sm-3 col-md-4 col-xl-4 col-lg-4 control-label" style="padding: 0">码头</label>
+                <div class="col-xs-9 col-sm-9 col-md-8 col-xl-8 col-lg-8" style="position: relative">
+                    <input type="text" class="form-control jetty-input" placeholder="审核">
+                    <div class="right-icon"><i class="fa fa-sort-down" aria-hidden="true"></i></div>
+                </div>
+            </div>
+        </form>
+        <form class="form-horizontal form-horizontal-update col-xs-12 col-sm-6 col-md-6 col-xl-4 col-lg-4 form-height" role="form">
+            <div class="form-group">
+                <label class="col-xs-3 col-sm-3 col-md-4 col-xl-4 col-lg-4 control-label" style="padding: 0">库存</label>
+                <div class="col-xs-9 col-sm-9 col-md-8 col-xl-8 col-lg-8" style="position: relative">
+                    <input type="text" class="form-control stock-input" placeholder="上海闵行">
+                    <div class="right-icon"><i class="fa fa-search" aria-hidden="true"></i></div>
+                </div>
+            </div>
+        </form>
+        <form class="form-horizontal form-horizontal-update col-xs-12 col-sm-6 col-md-6 col-xl-4 col-lg-4 form-height" role="form">
+            <div class="form-group">
+                <label class="col-xs-3 col-sm-3 col-md-4 col-xl-4 col-lg-4 control-label" style="padding: 0">ASN状态</label>
+                <div class="col-xs-9 col-sm-9 col-md-8 col-xl-8 col-lg-8" style="position: relative">
+                    <input type="text" class="form-control status-input" placeholder="库存001">
+                    <div class="right-icon"><i class="fa fa-sort-down" aria-hidden="true"></i></div>
+                </div>
+            </div>
+        </form>
+
+
+
+        <form class="form-horizontal form-horizontal-update col-xs-12 col-sm-6 col-md-6 col-xl-4 col-lg-4 form-height" role="form">
+            <div class="form-group">
+                <label class="col-xs-3 col-sm-3 col-md-4 col-xl-4 col-lg-4 control-label" style="padding: 0">创建时间</label>
+                <div class="col-xs-9 col-sm-9 col-md-8 col-xl-8 col-lg-8 preArrivalNotice-md-margin">
+                    <!--<input type="text" class="form-control"  style="background-color: #F8F8F8;padding: 0;border: none;border-radius: 0;margin: 2px;border-bottom: 1px solid #cccccc;">-->
+                     <md-input placeholder="" style="width: 100%"></md-input>
+                </div>
+            </div>
+        </form>
+        <form class="form-horizontal form-horizontal-update col-xs-12 col-sm-6 col-md-6 col-xl-4 col-lg-4 form-height" role="form">
+            <div class="form-group">
+                <label class="col-xs-3 col-sm-3 col-md-4 col-xl-4 col-lg-4 control-label" style="padding: 0;visibility:hidden">自定义2</label>
+                <div class="col-xs-9 col-sm-9 col-md-8 col-xl-8 col-lg-8 preArrivalNotice-md-margin">
+                    <!--<input type="text" class="form-control"  style="background-color: #F8F8F8;padding: 0;border: none;border-radius: 0;margin: 2px;border-bottom: 1px solid #cccccc;">-->
+                     <md-input placeholder="" style="width: 100%"></md-input>
+                </div>
+            </div>
+        </form>
+        <form  class="form-horizontal form-horizontal-update col-xs-12 col-sm-12 col-md-6 col-xl-4 col-lg-4 form-height screen-mt-845" role="form">
+            <div class="form-group">
+                <div  class="preArrivalNotice-date-wrap date-wrap">
+                    <div class="preArrivalNotice-date date-spec">明天</div>
+                    <div class="preArrivalNotice-date date-common">后天</div>
+                    <div class="preArrivalNotice-date date-common">近1周</div>
+                    <div class="preArrivalNotice-date date-common">近2周</div>
+                    <div class="preArrivalNotice-date date-common">近3周</div>
+                    <div class="preArrivalNotice-date date-common">近1月</div>
+                </div>
+            </div>
+        </form>
+ 
+    </div>
+     <div class="row preArrivalNotice-header screen-lt-845 date-lt-845-row" *ngIf="!togglePreArrivalNoticeForm">
+         <div class="form-horizontal form-horizontal-update col-xs-12 col-sm-12 col-md-12 col-xl-12 col-lg-12 date-lt-845-wrap">
+             <div class="col-xs-4 col-sm-4 col-md-4 col-xl-4 col-lg-4 preArrivalNotice-date-845 date-lt-845-spec">明天</div>
+             <div class="col-xs-4 col-sm-4 col-md-4 col-xl-4 col-lg-4 preArrivalNotice-date-845 date-lt-845-common date-lt-845-border">后天</div>
+             <div class="col-xs-4 col-sm-4 col-md-4 col-xl-4 col-lg-4 preArrivalNotice-date-845 date-lt-845-common date-lt-845-border">近1周</div>
+             <div class="col-xs-4 col-sm-4 col-md-4 col-xl-4 col-lg-4 preArrivalNotice-date-845 date-lt-845-common" >近2周</div>
+             <div class="col-xs-4 col-sm-4 col-md-4 col-xl-4 col-lg-4 preArrivalNotice-date-845 date-lt-845-common" >近3周</div>
+             <div class="col-xs-4 col-sm-4 col-md-4 col-xl-4 col-lg-4 preArrivalNotice-date-845 date-lt-845-common" >近1月</div>
+         </div>
+     </div>
+     <div class="row preArrivalNotice-header screen-lt-845 screen-lt-845-row">
+         <div class="form-horizontal form-horizontal-update col-xs-12 col-sm-12 col-md-12 col-xl-12 col-lg-12 screen-lt-845-wrap" *ngIf="!togglePreArrivalNoticeForm">
+             <div class="col-xs-4 col-sm-4 col-md-4 col-xl-4 col-lg-4 preArrivalNotice-date-845 preArrivalNotice-date-845-search">
+                 <i class="fa fa-search" aria-hidden="true"></i>搜索
+             </div>
+             <div class="col-xs-4 col-sm-4 col-md-4 col-xl-4 col-lg-4 preArrivalNotice-date-845 preArrivalNotice-date-845-reset">
+                  <i class="fa fa-times" aria-hidden="true"></i>重置
+             </div>
+             <div class="col-xs-4 col-sm-4 col-md-4 col-xl-4 col-lg-4 preArrivalNotice-date-845 preArrivalNotice-date-845-close"  (click)="togglePreArrivalFormFuc()">
+                  <i class="fa fa-angle-double-up" aria-hidden="true"></i>收起
+             </div>
+         </div>
+          
+         <div class="form-horizontal form-horizontal-update col-xs-12 col-sm-12 col-md-12 col-xl-12 col-lg-12 preArrivalNotice-date-tag-row" *ngIf="togglePreArrivalNoticeForm">
+                <div class="preArrivalNotice-form-btn-operation preArrivalNotice-date-tag-wrap">
+                    <button  class="preArrivalNotice-button_search_show">发货日期：2016-11-18<i class="fa fa-times" aria-hidden="true"></i></button>
+                    <button  class="preArrivalNotice-button_search_show">发货日期：2016-11-18<i class="fa fa-times" aria-hidden="true"></i></button>
+                    <button  class="preArrivalNotice-button_search_show">发货日期：2016-11-18<i class="fa fa-times" aria-hidden="true"></i></button>
+                </div>
+         </div>
+         <div class="form-horizontal form-horizontal-update col-xs-12 col-sm-12 col-md-12 col-xl-12 col-lg-12 preArrivalNotice-date-845-btn-row"  *ngIf="togglePreArrivalNoticeForm">
+             <div class="col-xs-6 col-sm-6 col-md-6 col-xl-6 col-lg-6 preArrivalNotice-date-845 preArrivalNotice-date-845-btn-reset">
+                  <i class="fa fa-times" aria-hidden="true"></i>重置
+             </div>
+             <div class="col-xs-6 col-sm-6 col-md-6 col-xl-6 col-lg-6 preArrivalNotice-date-845 preArrivalNotice-date-845-btn-show" (click)="togglePreArrivalFormFuc()">
+                  <i class="fa fa-angle-double-down" aria-hidden="true"></i>展开
+             </div>
+         </div>
+    </div>
+    <div class="row preArrivalNotice-header screen-mt-845 screen-mt-845-row" *ngIf="!togglePreArrivalNoticeForm">
+         <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1"></div>
+         <div class="col-xl-7 col-lg-7 col-md-7 col-sm-7 screen-mt-845-wrap">
+             <div class="preArrivalNotice-form-btn-operation">
+                  <button  class="preArrivalNotice-button_search"><i class="fa fa-search" aria-hidden="true"></i>搜索</button>
+                  <button  class="preArrivalNotice-button_reset"><i class="fa fa-times" aria-hidden="true"></i>重置</button>
+             </div>
+         </div>
+         
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4" style="padding-right:0">
+            <button  class="preArrivalNotice-button_show"><i class="fa fa-angle-double-up" aria-hidden="true" (click)="togglePreArrivalFormFuc()">收起</i></button>
+        </div>
+
+    </div>
+    <div class="row preArrivalNotice-header screen-mt-845 screen-mt-845-ngIf-row"  *ngIf="togglePreArrivalNoticeForm">
+         
+         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 screen-mt-845-ngIf-wrap">
+             <div class="preArrivalNotice-form-btn-operation">
+                  <button  class="preArrivalNotice-button_search_show">发货日期：2016-11-18<i class="fa fa-times" aria-hidden="true"></i></button>
+                  <button  class="preArrivalNotice-button_search_show">发货日期：2016-11-18<i class="fa fa-times" aria-hidden="true"></i></button>
+                  <button  class="preArrivalNotice-button_search_show">发货日期：2016-11-18<i class="fa fa-times" aria-hidden="true"></i></button>
+             </div>
+         </div>
+         
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 preArrivalNotice-btn-default">
+            <button  class="preArrivalNotice-button_show"><i class="fa fa-angle-double-down" aria-hidden="true" (click)="togglePreArrivalFormFuc()">展开</i></button>
+             <button  class="preArrivalNotice-button_show"><i class="fa fa-times" aria-hidden="true">重置</i></button>
+        </div>
+
+    </div>
+    <div class="row preArrivalNotice-agGrid-setting">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8">
+            <button (click)="checkOrder()" class="preArrivalNotice-button_check"><i class="fa fa-search" aria-hidden="true"></i>审核订单</button>
+            <button (click)="closeOrder()" class="preArrivalNotice-button_close"><i class="fa fa-eye" aria-hidden="true"></i>关闭订单<i class="fa fa-caret-down" aria-hidden="true"></i></button>
+            <button (click)="deleteOrder()"class="preArrivalNotice-button_delete"><i class="fa fa-times" aria-hidden="true"></i>删除订单</button>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-4">
+            <div (click)="showAgGridSetting()"><button  class="preArrivalNotice-button_wrench"><i class="fa fa-wrench" aria-hidden="true"></i></button></div>
+            <div> <button  class="preArrivalNotice-button_file"><i class="fa fa-file" aria-hidden="true"></i></button></div>
+            
+        </div>
+    </div>
+    <!--<div class="row edit-order-content" style="background-color: #1de9b6">-->
+    <!--<div style="float: right">111</div>-->
+    <!--<button routerLink="/#" class="button_setting"><i class="fa fa-wrench" aria-hidden="true"></i></button>-->
+    <!--</div>-->
+    <ag-grid-ng2 #agGrid style="width:100%;height:auto;padding:10px;" class="ag-fresh"
+                 [gridOptions]="gridOptions"
+                 [rowData]="rowData"
+                 rowSelection="multiple"
+                 enableSorting
+                 enableFilter
+                 suppressRowClickSelection
+                 (selectionChanged)="onSelectionChanged($event)"
+                 (cellValueChanged)="onCellValueChanged($event)"
+                 [localeText]="localeText"
+                 rowHeight="30"
+                 headerHeight="30">
+    </ag-grid-ng2>
+
+   <div *ngIf="showAgGridDragSetting" class="preArrivalNotice-agGrid-column-order">
+        <div class="preArrivalNotice-agGrid-column-order-header">
+            <div class="preArrivalNotice-left-title">自定义表格</div>
+            <button (click)="hideAgGridSetting()" class="preArrivalNotice-right-close"><i class="fa fa-times" aria-hidden="true"></i></button>
+        </div>
+        <div class="preArrivalNotice-agGrid-column-order-content">
+            <div class="preArrivalNotice-agGrid-column-order-content-title">
+                <div class="preArrivalNotice-header-left">已选</div>
+                <div class="preArrivalNotice-header-right">拖动调整顺序</div>
+            </div>
+            <div class="preArrivalNotice-agGrid-column-order-content-tag">
+                    <div>采购订单</div>
+                    <div>来源订单</div>
+                    <div>供应商</div>
+            </div>
+        </div>
+        <div class="preArrivalNotice-agGrid-column-order-footer">
+            <div class="preArrivalNotice-agGrid-column-order-footer-title">
+                <div class="preArrivalNotice-footer-left">全部</div>
+                <div class="preArrivalNotice-footer-right">拖动添加至已选区</div>
+            </div>
+             <div class="preArrivalNotice-agGrid-column-order-footer-tag">
+                 <div>整箱数</div>
+                <div>单个金额</div>
+                <div>总金额</div>
+             </div>
+        </div>
+    </div>
+     <form class="form-horizontal form-horizontal-update col-xs-12 col-sm-12 col-md-12 col-xl-12 col-lg-12 form-height" role="form">
+            <div class="form-group">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-xl-4 col-lg-4 preArrivalNotice-slide-default">
+                    <md-slider step="10" style="width:100%"></md-slider>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-xl-8 col-lg-8" style="height:30px;padding:0">
+                    <div class="preArrivalNotice-pages screen-mt-600">
+                        <div class="preArrivalNotice-pages-left">
+                                <ul>
+                                    <li><i class="fa fa-angle-double-left" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-angle-left" aria-hidden="true"></i></li>
+                                    <li>1</li>
+                                    <li>2</li>
+                                    <li>3</li>
+                                    <li>4</li>
+                                    <li>5</li>
+                                    <li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-angle-double-right" aria-hidden="true"></i></li>
+                                    <li class="preArrivalNotice-pages-select-default">
+                                        <select>
+                                            <option value="10">10</option>
+                                            <option value="20">20</option>
+                                            <option value="30">30</option>
+                                        </select>
+                                        <span>条/页</span>
+                                    </li>
+                                </ul>
+                               
+                        </div>
+                        <div class="preArrivalNotice-pages-right">
+                            <div class="preArrivalNotice-pages-right-content">
+                                <span>已经加载</span>
+                                <span>100/260</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="screen-lt-600 screen-lt-600-row">
+                         <div class="preArrivalNotice-pages-left  preArrivalNotice-pages-left-width">
+                                <ul>
+                                    <li><i class="fa fa-angle-double-left" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-angle-left" aria-hidden="true"></i></li>
+                                    <li>1</li>
+                                    <li>2</li>
+                                    <li>3</li>
+                                    <li>4</li>
+                                    <li>5</li>
+                                    <li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-angle-double-right" aria-hidden="true"></i></li>
+                                </ul>                              
+                        </div>
+                        <div class="preArrivalNotice-pages-float">
+                            <select class="preArrivalNotice-pages-wrap">
+                                <option value="10">10</option>
+                                <option value="20">20</option>
+                                <option value="30">30</option>
+                            </select>
+                            <span>条/页</span>
+                        </div>
+                        <div class="preArrivalNotice-pages-right-content preArrivalNotice-pages-right-content-style">
+                                <span>已经加载</span>
+                                <span>100/260</span>
+                            </div>
+                    </div>
+                </div>
+            </div>
+     </form>
+   
+</div>
+
+

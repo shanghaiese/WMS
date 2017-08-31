@@ -1,0 +1,1 @@
+export const baseUrl:string = 'http://172.17.2.166:8081/mockjs/3/';

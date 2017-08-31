@@ -1,0 +1,79 @@
+<div style="width: 200px; height: 100%; background:#E2F3EF !important;position: relative">
+    <div class="eleInline">
+        <input #input  [(ngModel)]="value" id="inputFocus" style="background:#E2F3EF !important;width:155px; height: 24px; outline: none;text-align: center;border:none !important" (keydown)="onKeyDown($event)">
+    </div>
+    <div class="eleInline" style="padding-left: 10px;position: absolute;right: 5px;top:-1px;width: 20px;padding: 0;" (click)="open()">
+        <i class="fa fa-search" style="color: #CCCCCC;  cursor: pointer;"></i>
+    </div>
+</div>
+<modal #modal [keyboard]="false" [backdrop]="'static'" (onClose)="closed()" (onDismiss)="dismissed()" (onOpen)="opened()" cssClass="modal-xl">
+    <modal-header [show-close]="false">
+        <button type="button" aria-label="Close" class="close" data-dismiss="modal">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">查询订单号</h4>
+    </modal-header>
+    <modal-body>
+        <div>
+            <div class="md-dialog-content modalGrid">
+                <div class=" col-lg-12" style="position:relative;z-index:10000">
+                    <form name="modalForm">
+                        <div class="col-lg-12">
+                            <div class="col-lg-3 col-md-4 col-sm-12">
+                                <div class="col-lg-4 col-md-4 col-sm-4 modal-input-padding">
+                                    <span>来源单号:</span>
+                                </div>
+                                <div class="col-lg-8 col-md-8 col-sm-8 modal-input-padding">
+                                    <input  class="form-control"  disabled/>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-12 ">
+                                <div class="col-lg-4 col-md-4 col-sm-4 modal-input-padding">
+                                    <span>收货时间:</span>
+                                </div>
+                                <div class="col-lg-8 col-md-8 col-sm-8 modal-input-padding">
+                                    <input class="form-control"  disabled/>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-12">
+                                <div class="col-lg-4 col-md-4 col-sm-4 modal-input-padding">
+                                    <span>单号检索:</span>
+                                </div>
+                                <div class="col-lg-8 col-md-8 col-sm-8 modal-input-padding">
+                                    <input id="searchCode" class="form-control" /> <!--ng-keyup="query(1,modalForm.searchCode)"-->
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <table class="table table-striped b-t b-light modalTablePadding">
+                <thead>
+                <tr>
+                    <th></th>
+                    <th>单号</th>
+                    <th>店名称</th>
+                    <th>订单来源号</th>
+                    <th>备注</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let data of modalData; let i = index;" (dblclick)="chooseRow(i)" (disabled)="true">
+                    <td>
+                        <span><input type="radio" name="identity" (click)="oneCheck(i)"/></span> <!--ng-change="hasCheckedOrNot(data)" ng-model="data.checked"  (click)="oneCheck(this)">x<input type="radio"  (click)="checkRow(lineInde)"-->
+                    </td>
+                    <td>{{data.orderNum}}</td>
+                    <td>{{data.getGoodsStore}}</td>
+                    <td>{{data.orderFrom}}</td>
+                    <td>{{data.notes}}</td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </modal-body>
+    <modal-footer>
+        <button class="btn btn-primary" (click)="dismissed()">取消</button>
+        <button class="btn btn-success" (click)="returnData()">确定</button>
+    </modal-footer>
+</modal>

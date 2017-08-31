@@ -1,0 +1,274 @@
+<div>
+    <div class="row edit-order-header edit-order-mt-667">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8">
+            <button routerLink="/#" class="button_times" style="font-size:15px"><i class="fa fa-reply" aria-hidden="true"></i>返回</button>
+            <div class="edit-order-header-title" style="font-size:15px">编辑ASN编码：00011604180002
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-4">
+            <button routerLink="/#" class="button_save" style="font-size:15px"><i class="fa fa-check" aria-hidden="true"></i>保存</button>
+        </div>
+    </div>
+    <div class="row edit-order-header edit-order-lt-667">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">编辑ASN编码：00011604180002 </div>
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 edit-order-header">
+            <button routerLink="/#" class="button_times" style="font-size:15px"><i class="fa fa-reply" aria-hidden="true"></i>返回</button>
+            <button routerLink="/#" class="button_save" style="font-size:15px"><i class="fa fa-check" aria-hidden="true"></i>保存</button>
+        </div>
+    </div>
+    <div class="row edit-order-content">
+        <form class="form-horizontal form-horizontal-update col-xs-12 col-sm-6 col-md-6 col-xl-4 col-lg-4 form-height" role="form">
+            <div class="form-group">
+                <label class="col-xs-3 col-sm-3 col-md-4 col-xl-4 col-lg-4 control-label" style="padding: 0"><span style="color:red;">*</span>预到货通知</label>
+                <div class="col-xs-9 col-sm-9 col-md-8 col-xl-8 col-lg-8">
+                    <input readonly type="text" class="form-control" value="00013344244545445" style="background-color: #F8F8F8;padding: 0;border: none;border-radius: 0;margin: 2px;color:#00BBB3;">
+                </div>
+            </div>
+        </form>
+        <form class="form-horizontal form-horizontal-update col-xs-12 col-sm-6 col-md-6 col-xl-4 col-lg-4 form-height" role="form">
+            <div class="form-group">
+                <label class="col-xs-3 col-sm-3 col-md-4 col-xl-4 col-lg-4 control-label" style="padding: 0"><span style="color:red;">*</span>来源单号</label>
+                <div class="col-xs-9 col-sm-9 col-md-8 col-xl-8 col-lg-8">
+                    <input type="text" class="form-control" placeholder="0001111222" style="background-color: #F8F8F8;padding: 0;border: none;border-radius: 0;margin: 2px;border-bottom: 1px solid #cccccc;">
+                </div>
+            </div>
+        </form>
+        <form class="form-horizontal form-horizontal-update col-xs-12 col-sm-6 col-md-6 col-xl-4 col-lg-4 form-height" role="form">
+            <div class="form-group">
+                <label class="col-xs-3 col-sm-3 col-md-4 col-xl-4 col-lg-4 control-label" style="padding: 0"><span style="color:red;">*</span>采购订单</label>
+                <div class="col-xs-9 col-sm-9 col-md-8 col-xl-8 col-lg-8">
+                    <input type="text" #heroName class="form-control" placeholder="系统自动生成" style="background-color: #F8F8F8;padding: 0;border: none;border-radius: 0;margin: 2px;">
+                </div>
+            </div>
+        </form>
+
+
+
+        <form class="form-horizontal form-horizontal-update col-xs-12 col-sm-6 col-md-6 col-xl-4 col-lg-4 form-height" role="form">
+            <div class="form-group">
+                <label class="col-xs-3 col-sm-3 col-md-4 col-xl-4 col-lg-4 control-label" style="padding: 0"><span style="color:red;">*</span>ASN类型</label>
+                <div class="col-xs-9 col-sm-9 col-md-8 col-xl-8 col-lg-8" style="position: relative">
+                    <input type="text" class="form-control" placeholder="新建ASN" style="background-color: #F8F8F8;padding: 0;border: none;border-radius: 0;margin: 2px;border-bottom: 1px solid #cccccc;">
+                    <div class="right-icon"><i class="fa fa-sort-down" aria-hidden="true"></i></div>
+                </div>
+            </div>
+        </form>
+        <form class="form-horizontal form-horizontal-update col-xs-12 col-sm-6 col-md-6 col-xl-4 col-lg-4 form-height" role="form">
+            <div class="form-group">
+                <label class="col-xs-3 col-sm-3 col-md-4 col-xl-4 col-lg-4 control-label" style="padding: 0"><span style="color:red;">*</span>货主</label>
+                <div class="col-xs-9 col-sm-9 col-md-8 col-xl-8 col-lg-8" style="position: relative">
+                    <input  [(ngModel)]="detailsOrderDataObject.owner.ownerNameC" name="ownerNameC" type="text" class="form-control" placeholder="联华超市" style="background-color: #F8F8F8;padding: 0;border: none;border-radius: 0;margin: 2px;border-bottom: 1px solid #cccccc;">
+                    <div class="right-icon"><i class="fa fa-search" aria-hidden="true"></i></div>
+                </div>
+            </div>
+        </form>
+        <form class="form-horizontal form-horizontal-update col-xs-12 col-sm-6 col-md-6 col-xl-4 col-lg-4 form-height" role="form">
+            <div class="form-group">
+                <label class="col-xs-3 col-sm-3 col-md-4 col-xl-4 col-lg-4 control-label" style="padding: 0"><span style="color:red;">*</span>供应商</label>
+                <div class="col-xs-9 col-sm-9 col-md-8 col-xl-8 col-lg-8" style="position: relative">
+                    <input [(ngModel)]="detailsOrderDataObject.supplier.supplierNameC" name="supplierNameC" type="text" class="form-control" placeholder="雀巢" style="background-color: #F8F8F8;padding: 0;border: none;border-radius: 0;margin: 2px;border-bottom: 1px solid #cccccc;">
+                    <div class="right-icon"><i class="fa fa-search" aria-hidden="true"></i></div>
+                </div>
+            </div>
+        </form>
+
+
+
+        <form class="form-horizontal form-horizontal-update col-xs-12 col-sm-6 col-md-6 col-xl-4 col-lg-4 form-height" role="form">
+            <div class="form-group">
+                <label class="col-xs-3 col-sm-3 col-md-4 col-xl-4 col-lg-4 control-label" style="padding: 0"><span style="color:red;">*</span>ASN状态</label>
+                <div class="col-xs-9 col-sm-9 col-md-8 col-xl-8 col-lg-8" style="position: relative">
+                    <input [(ngModel)]="detailsOrderDataObject.status" name="status" type="text" class="form-control" placeholder="审核" style="background-color: #F8F8F8;padding: 0;border: none;border-radius: 0;margin: 2px;border-bottom: 1px solid #cccccc;">
+                    <div class="right-icon"><i class="fa fa-sort-down" aria-hidden="true"></i></div>
+                </div>
+            </div>
+        </form>
+        <form class="form-horizontal form-horizontal-update col-xs-12 col-sm-6 col-md-6 col-xl-4 col-lg-4 form-height" role="form">
+            <div class="form-group">
+                <label class="col-xs-3 col-sm-3 col-md-4 col-xl-4 col-lg-4 control-label" style="padding: 0"><span style="color:red;">*</span>码头</label>
+                <div class="col-xs-9 col-sm-9 col-md-8 col-xl-8 col-lg-8" style="position: relative">
+                    <input type="text" class="form-control" placeholder="上海闵行" style="background-color: #F8F8F8;padding: 0;border: none;border-radius: 0;margin: 2px;border-bottom: 1px solid #cccccc;">
+                    <div class="right-icon"><i class="fa fa-search" aria-hidden="true"></i></div>
+                </div>
+            </div>
+        </form>
+        <form class="form-horizontal form-horizontal-update col-xs-12 col-sm-6 col-md-6 col-xl-4 col-lg-4 form-height" role="form">
+            <div class="form-group">
+                <label class="col-xs-3 col-sm-3 col-md-4 col-xl-4 col-lg-4 control-label" style="padding: 0"><span style="color:red;">*</span>库存</label>
+                <div class="col-xs-9 col-sm-9 col-md-8 col-xl-8 col-lg-8" style="position: relative">
+                    <input type="text" class="form-control" placeholder="库存001" style="background-color: #F8F8F8;padding: 0;border: none;border-radius: 0;margin: 2px;border-bottom: 1px solid #cccccc;">
+                    <div class="right-icon"><i class="fa fa-sort-down" aria-hidden="true"></i></div>
+                </div>
+            </div>
+        </form>
+
+
+
+        <form class="form-horizontal form-horizontal-update col-xs-12 col-sm-6 col-md-6 col-xl-4 col-lg-4 form-height" role="form">
+            <div class="form-group">
+                <label class="col-xs-3 col-sm-3 col-md-4 col-xl-4 col-lg-4 control-label" style="padding: 0"><span style="color:red;">*</span>自定义1</label>
+                <div class="col-xs-9 col-sm-9 col-md-8 col-xl-8 col-lg-8">
+                    <input [(ngModel)]="detailsOrderDataObject.userDefine01" name="userDefine01" type="text" class="form-control"  style="background-color: #F8F8F8;padding: 0;border: none;border-radius: 0;margin: 2px;border-bottom: 1px solid #cccccc;">
+                </div>
+            </div>
+        </form>
+        <form class="form-horizontal form-horizontal-update col-xs-12 col-sm-6 col-md-6 col-xl-4 col-lg-4 form-height" role="form">
+            <div class="form-group">
+                <label class="col-xs-3 col-sm-3 col-md-4 col-xl-4 col-lg-4 control-label" style="padding: 0"><span style="color:red;">*</span>自定义2</label>
+                <div class="col-xs-9 col-sm-9 col-md-8 col-xl-8 col-lg-8">
+                    <input [(ngModel)]="detailsOrderDataObject.userDefine02" name="userDefine02" type="text" class="form-control"  style="background-color: #F8F8F8;padding: 0;border: none;border-radius: 0;margin: 2px;border-bottom: 1px solid #cccccc;">
+                </div>
+            </div>
+        </form>
+        <form class="form-horizontal form-horizontal-update col-xs-12 col-sm-6 col-md-6 col-xl-4 col-lg-4 form-height" role="form">
+            <div class="form-group">
+                <label class="col-xs-3 col-sm-3 col-md-4 col-xl-4 col-lg-4 control-label" style="padding: 0"><span style="color:red;">*</span>自定义3</label>
+                <div class="col-xs-9 col-sm-9 col-md-8 col-xl-8 col-lg-8">
+                    <input [(ngModel)]="detailsOrderDataObject.userDefine03" name="userDefine03" type="text" class="form-control"  style="background-color: #F8F8F8;padding: 0;border: none;border-radius: 0;margin: 2px;border-bottom: 1px solid #cccccc;">
+                </div>
+            </div>
+        </form>
+
+    </div>
+    <div class="row edit-order-content">
+        <form class="form-horizontal col-xs-12 col-sm-12 col-md-12 col-xl-12 col-lg-12" role="form" style="margin-bottom: 0 !important;">
+            <div class="form-group" class="mt-992-margin mt-1200-margin">
+                <label class="col-xs-2 col-sm-2 col-md-2 col-xl-1 col-lg-1 control-label " style="text-align:right;padding-right:0px;"><span style="color:red;">*</span>备注</label>
+                <div class="col-xs-8 col-sm-10 col-md-10 col-xl-11 col-lg-11">
+                    <input [(ngModel)]="detailsOrderDataObject.notes" name="notes" type="text" class="form-control"  style="background-color: #F8F8F8;padding: 0;border: none;border-radius: 0;margin: 2px;border-bottom: 1px solid #cccccc;">
+                </div>
+            </div>
+        </form>
+        <form class="form-horizontal form-horizontal-update col-xs-6 col-sm-6 col-md-3 col-xl-3 col-lg-3 form-height" role="form">
+            <div class="form-group">
+                <label class="col-xs-5 col-sm-5 col-md-5 col-xl-5 col-lg-5 control-label" style="padding: 0;text-align: right">总金额</label>
+                <div class="col-xs-7 col-sm-7 col-md-7 col-xl-7 col-lg-7">
+                    <input [(ngModel)]="details.totalAmount" name="notes" readonly type="text" class="form-control" placeholder="￥0.00" style="background-color: #F8F8F8;padding: 0;border: none;border-radius: 0;margin: 2px;">
+                </div>
+            </div>
+        </form>
+        <form class="form-horizontal form-horizontal-update col-xs-6 col-sm-6 col-md-3 col-xl-3 col-lg-3 form-height" role="form">
+            <div class="form-group">
+                <label class="col-xs-5 col-sm-5 col-md-5 col-xl-5 col-lg-5 control-label" style="padding: 0;text-align: right">总体积</label>
+                <div class="col-xs-7 col-sm-7 col-md-7 col-xl-7 col-lg-7">
+                    <input [(ngModel)]="details.totalVolume" name="notes" readonly type="text" class="form-control" placeholder="￥0.00" style="background-color: #F8F8F8;padding: 0;border: none;border-radius: 0;margin: 2px;">
+                </div>
+            </div>
+        </form>
+        <form class="form-horizontal form-horizontal-update col-xs-6 col-sm-6 col-md-3 col-xl-3 col-lg-3 form-height" role="form">
+            <div class="form-group">
+                <label class="col-xs-5 col-sm-5 col-md-5 col-xl-5 col-lg-5 control-label" style="padding: 0;text-align: right">总毛重</label>
+                <div class="col-xs-7 col-sm-7 col-md-7 col-xl-7 col-lg-7">
+                    <input [(ngModel)]="details.totalGrossWeight" name="notes" readonly type="text" class="form-control" placeholder="￥0.00" style="background-color: #F8F8F8;padding: 0;border: none;border-radius: 0;margin: 2px;">
+                </div>
+            </div>
+        </form>
+        <form class="form-horizontal form-horizontal-update col-xs-6 col-sm-6 col-md-3 col-xl-3 col-lg-3 form-height" role="form">
+            <div class="form-group">
+                <label class="col-xs-5 col-sm-5 col-md-5 col-xl-5 col-lg-5 control-label" style="padding: 0;text-align: right">总净重</label>
+                <div class="col-xs-7 col-sm-7 col-md-7 col-xl-7 col-lg-7">
+                    <input [(ngModel)]="details.totalNetWeight" name="notes" readonly type="text" class="form-control" placeholder="￥0.00" style="background-color: #F8F8F8;padding: 0;border: none;border-radius: 0;margin: 2px;">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="row edit-order-agGrid-setting">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8"></div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-4">
+            <button  class="button_setting" (click)="add2(heroName.value);"><i class="fa fa-wrench" aria-hidden="true"></i></button>
+        </div>
+
+    </div>
+    <!--<div class="row edit-order-content" style="background-color: #1de9b6">-->
+    <!--<div style="float: right">111</div>-->
+    <!--<button routerLink="/#" class="button_setting"><i class="fa fa-wrench" aria-hidden="true"></i></button>-->
+    <!--</div>-->
+    <ag-grid-ng2 #agGrid style="width:100%;height:380px;padding:10px;" class="ag-fresh"
+                 [gridOptions]="gridOptions"
+                 [rowData]="rowData"
+                 rowSelection="multiple"
+                 enableSorting
+                 enableFilter
+                 suppressRowClickSelection
+                 (selectionChanged)="onSelectionChanged($event)"
+                 (cellValueChanged)="onCellValueChanged($event)"
+                 [localeText]="localeText"
+                 rowHeight="30"
+                 headerHeight="30">
+    </ag-grid-ng2>
+
+    <!--<div class="col-xs-12 col-md-12 col-lg-12" style="background-color: #F5F5F5;padding: 0;color: #FFFFFF;z-index: 10000;height:60px;">
+        <div class="row">
+            <form class="form-horizontal form-horizontal-update col-xs-12 col-sm-12 col-md-12 col-xl-12 col-lg-12 form-height" role="form">
+                <div class="form-group">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-xl-4 col-lg-4" style="height:30px">
+                        <div style="display: inline-block"><button class="btn btn-default"><i class="fa fa-angle-left"></i></button></div>
+                        <div style="display: inline-block;padding-top: 6px;"><md-slider step="10" style="width: 100%"></md-slider></div>
+                        <div style="display: inline-block"><button class="btn btn-default"><i class="fa fa-angle-right"></i></button></div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-xl-8 col-lg-8" style="height:30px;padding:0">
+                        <div class="preArrivalNotice-pages screen-mt-600">
+                            <div class="preArrivalNotice-pages-left">
+                                <ul>
+                                    <li><i class="fa fa-angle-double-left page-btn" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-angle-left page-btn" aria-hidden="true"></i></li>
+                                    <li class="page-btn">1</li>
+                                    <li class="page-btn">2</li>
+                                    <li class="page-btn">3</li>
+                                    <li class="page-btn">4</li>
+                                    <li class="page-btn">5</li>
+                                    <li><i class="fa fa-angle-right page-btn" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-angle-double-right page-btn" aria-hidden="true"></i></li>
+                                    <li style="width:90px">
+                                        <select>
+                                            <option value="10">10</option>
+                                            <option value="20">20</option>
+                                            <option value="30">30</option>
+                                        </select>
+                                        <span>条/页</span>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <div class="preArrivalNotice-pages-right">
+                                <div class="preArrivalNotice-pages-right-content">
+                                    <span>已经加载</span>
+                                    <span>100/260</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="screen-lt-600" style="width:100%;height:auto;background:red;">
+                            <div class="preArrivalNotice-pages-left" style="width:100%;min-width:449px">
+                                <ul>
+                                    <li><i class="fa fa-angle-double-left" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-angle-left" aria-hidden="true"></i></li>
+                                    <li>1</li>
+                                    <li>2</li>
+                                    <li>3</li>
+                                    <li>4</li>
+                                    <li>5</li>
+                                    <li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+                                    <li><i class="fa fa-angle-double-right" aria-hidden="true"></i></li>
+                                </ul>
+                            </div>
+                            <div style="float:left">
+                                <select style="border:none;color:#17b89b">
+                                    <option value="10">10</option>
+                                    <option value="20">20</option>
+                                    <option value="30">30</option>
+                                </select>
+                                <span>条/页</span>
+                            </div>
+                            <div class="preArrivalNotice-pages-right-content" style="float:right;color:#17b89b">
+                                <span>已经加载</span>
+                                <span>100/260</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>-->
+</div>
+
+

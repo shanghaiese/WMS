@@ -1,0 +1,150 @@
+<div class="detailsOrder">
+    <div class="row detailsASN-header-outer">
+        <div class="col-lg-6 col-xl-6 col-md-6 col-sm-12 col-xs-12 detailsASN-header-inner-1">
+            <button class="btn_back col-lg-4 col-xl-4 col-md-4 col-sm-4 col-xs-4"><i class="fa fa-level-up"
+                                                                                     aria-hidden="true"></i>&nbsp;返回
+            </button>
+            <div class="col-lg-8 detailsASN-header-inner-ASNcode">
+                <span>采购订单：00011604180002</span>
+            </div>
+        </div>
+        <div class="col-lg-6  col-xl-6 col-md-6 col-sm-12 col-xs-12 detailsASN-header-inner-2">
+            <div class="detailsOrder-header-inner-button">
+                <button class="btn_plus "><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;新增</button>
+                <button class="btn_square "><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp;编辑</button>
+                <button class="btn_file "><i class="fa fa-file-o" aria-hidden="true"></i>&nbsp;生成SAN</button>
+                <button class="btn_eye "><i class="fa fa-eye" aria-hidden="true"></i>&nbsp;关闭订单<i
+                        class="fa fa-caret-down" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="detailsASN-liner"></div>
+    <div>
+        <div class="row detailsASN-grid-header">
+            <div class="form-group col-lg-4">
+                <div class="detailsASN-grid-header-padding">
+                    <i class="fa fa-circle detailsASN-grid-dot"
+                       aria-hidden="true"></i>
+                    <span class="detailsASN-grid-headerName">基本信息</span>
+                </div>
+
+            </div>
+        </div>
+        <div class="row detailsASN-grid-content">
+            <div class="form-group col-lg-12 col-xl-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="form-group col-lg-4 col-xl-4 col-md-4 col-sm-6 col-xs-12 ">
+                    <div class="_div">
+                        <label>货主</label>
+                        <span>{{detailsOrderDataObject.owner.ownerNameC}}</span>
+                    </div>
+
+                </div>
+                <div class="form-group col-lg-4 col-xl-4 col-md-4 col-sm-6 col-xs-12 ">
+                    <div class="_div">
+                        <label>来源单号</label>
+                        <span>00011604180002</span>
+                    </div>
+
+                </div>
+                <div class="form-group col-lg-4 col-xl-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="_div">
+                        <label>仓库</label>
+                        <span>仓库001</span>
+                    </div>
+
+                </div>
+                <div class="form-group col-lg-4 col-xl-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="_div">
+                        <label>送货时间</label>
+                        <span>{{detailsOrderDataObject.expectedArriveDate1}}</span>
+                    </div>
+
+                </div>
+                <div class="form-group col-lg-4 col-xl-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="_div">
+                        <label>失效时间</label>
+                        <span> {{detailsOrderDataObject.expectedArriveDate2}}</span>
+                    </div>
+
+                </div>
+                <div class="form-group col-lg-4 col-xl-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="_div">
+                        <label>订单状态</label>
+                        <span>{{detailsOrderDataObject.status}}</span>
+                    </div>
+                </div>
+                <div class="form-group col-lg-4 col-xl-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="_div">
+                        <label>自定义1</label>
+                        <span>{{detailsOrderDataObject.userDefine01}}</span>
+                    </div>
+                </div>
+                <div class="form-group col-lg-12 col-xl-12 col-md-12 col-sm-12 col-xs-12 _div">
+                    <div class="col-lg-4 col-xl-4 col-md-4 col-sm-6 col-xs-12">
+                        <label>备注</label>
+                        <span>{{detailsOrderDataObject.notes}}</span>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-xl-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="form-group col-lg-3 col-xl-3 col-md-3 col-sm-6 col-xs-12 div_out ">
+                        <div class="div_int">
+                            <div class="col-lg-4 col-xl-4 col-md-4 col-sm-4 col-xs-4 divGrid">
+                                总金额
+                            </div>
+                            <div class="col-lg-8 divGrid-right">
+                                {{details.totalAmount}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-3 col-xl-3 col-md-3 col-sm-6 col-xs-12 div_out">
+                        <div class="div_int">
+                            <div class="col-lg-4 col-xl-4 col-md-4 col-sm-4 col-xs-4 divGrid">
+                                总体积
+                            </div>
+                            <div class="col-lg-8 divGrid-right">
+                                {{details.totalVolume}}
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-group col-lg-3 col-xl-3 col-md-3 col-sm-6 col-xs-12 div_out">
+                        <div class="div_int">
+                            <div class="col-lg-4  col-xl-4 col-md-4 col-sm-4 col-xs-4 divGrid">
+                                总毛重
+                            </div>
+                            <div class="col-lg-8 divGrid-right">
+                                {{details.totalGrossWeight}}
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-group col-lg-3 col-xl-3 col-md-3 col-sm-6 col-xs-12 div_out">
+                        <div class="div_int">
+                            <div class="col-lg-4  col-xl-4 col-md-4 col-sm-4 col-xs-4 divGrid">
+                                总净重
+                            </div>
+                            <div class="col-lg-8 divGrid-right">
+                                {{details.totalNetWeight}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div>
+        <button class="btn_wrench">
+            <i class="fa fa-wrench" aria-hidden="true"></i></button>
+    </div>
+    <ag-grid-ng2 #agGrid class="ag-fresh sly detailsOrder-agGrid" [gridOptions]="gridOptions"
+                 [rowData]="rowData"
+                 rowSelection="multiple"
+                 enableSorting
+                 enableFilter
+                 suppressRowClickSelection
+                 [localeText]="localeText"
+                 rowHeight="30"
+                 headerHeight="40">
+    </ag-grid-ng2>
+</div>

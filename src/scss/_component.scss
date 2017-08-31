@@ -1,0 +1,47 @@
+$fontSize16:16px;
+$fontSize14:14px;
+$lineHeight30:30px;
+input{outline:none;}
+.component-header{font-size:$fontSize14; line-height:$lineHeight30; border-bottom:1px solid #e5e5e5;margin-top:8px;  line-height:34px;}
+.component-content{padding:10px 0;}
+.textRight{text-align:right}
+.btnGreen{background:$greenBgColor;border:1px solid $greenBgColor;color:$white}
+.btnGreen:hover{background:#11CD6E; border:1px solid #11CD6E;color:$white}
+.split{padding:10px 0; border-bottom:1px dashed #e5e5e5;}
+.form-control-label{line-height:25px; height:25px; margin-top:10px;}
+.input-group-control{height:32px; margin:6px 0 8px 0; line-height:32px;}
+.input-group-control md-input,.input-group-control input{width:100%; height:20px;}
+.md-input-element{height:20px;}
+.btn-back {
+  border: 0;
+  background: $greyBgColor;
+  width: 75px;
+  height: 34px;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.btn-back:hover {
+  background: #FFFFFF;
+  border-radius: 3px;
+  box-shadow: 0 0 10px #D9D9D9;
+}
+.pull-left{float:left}
+.date-picker{background-color: $greyBgColor;padding: 0;border: none;border-radius: 0;border-bottom: 1px solid #cccccc}
+.md-input-underline{border-color:#cccccc; color:#cccccc;}
+.select{border:none; border-bottom:1px solid #cccccc;border-radius:0; background-color:$greyBgColor;}
+select:focus{background:$greyBgColor; border:1px solid #00bb9c}
+.form-control:focus{border-color:#00bb9c}
+.btn-refresh{background-color:#33475f;color:#ffffff;}
+.btn-refresh:hover{background-color:#11CD6E;color:#ffffff;}
+.btn-m{width:75px; height:34px; font-size:14px;}
+.btn i{margin-right:5px;}
+.btn-l{width:120px; height:28px;}
+.ml10{margin-left:10px;}
+.mt10{margin-top:10px;}
+.icon-color{color:#999999;}
+.icon-color:hover{color:#00bb9c}
+.btn-group > .btn:focus, .btn-group > .btn:active,.btn-group > .btn:hover{color:#ffffff;background-color:#00bb9c;border:1px solid #00bb9c}
+modal-header{background-color:#a9b7b7; color:#ffffff;}
+.modal-header{background-color:#a9b7b7}
+.data-list thead{background-color:$greenBgColor;color:#ffffff; height:30px; line-height:30px;font-size:12px;}

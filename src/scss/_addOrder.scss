@@ -1,0 +1,85 @@
+/**
+ * Created by caikaijie on 2016/11/14.
+ */
+#add-order-body{
+  background-color: #F8F8F8;
+ 
+  *{
+    font-size: 12px
+  }
+  label{
+    text-align: right;
+  }
+}
+.add-order-header{
+  height: 50px;
+  margin: 0;
+  border-bottom: 1px solid #E5E5E5 ;
+  .button_times{
+    width: 80px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    border: none;
+    float: left;
+    height: 34px;
+  }
+  .button_times:hover{
+    background-color: white;
+  }
+  .add-order-header-title{
+    margin: 10px;
+    width: 235px;
+    float: left;
+    line-height: 32px;
+  }
+  .button_save{
+    width: 80px;
+    margin: 10px;
+    background-color: #17B89B;
+    border: none;
+    float: right;
+    height: 34px;
+    color: white;
+  }
+  .add-order-header-line{
+    height: 1px;
+    width: 100%;
+    background-color:#E5E5E5 ;
+  }
+
+}
+.add-order-content{
+
+  margin: 0;
+  margin-top: 15px;
+  .form-height{
+    height: 24px;
+
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+  }
+}
+.button_setting{
+  background: #F8F8F8;
+  font-weight: bold;
+  border: 0px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width:30px;
+  height:30px;
+  float:right;
+  margin-right: 10px;
+  margin-left: 10px;
+
+}
+.button_setting:hover{
+  background-color: white !important;
+  border: 1px solid #cccccc;
+  border-radius: 5px
+}
+.add-order-agGrid-setting{
+  height: 50px;
+  margin: 0;
+}
